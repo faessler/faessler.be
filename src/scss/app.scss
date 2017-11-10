@@ -1,0 +1,119 @@
+// ************************************************************************** //
+//  ╦╔═╗╔╗╔  ╔═╗╔═╗╔═╗╔═╗╔═╗╦  ╔═╗╦═╗
+//  ║╠═╣║║║  ╠╣ ╠═╣║╣ ╚═╗╚═╗║  ║╣ ╠╦╝
+// ╚╝╩ ╩╝╚╝  ╚  ╩ ╩╚═╝╚═╝╚═╝╩═╝╚═╝╩╚═
+//
+// AUTH: Jan Fässler
+// MAIL: jan@faessler.be
+// COPY: © 2017
+// ************************************************************************** //
+
+
+// ********************************** //
+// IMPORT FILES
+// ********************************** //
+@import "svg";
+
+
+
+// ********************************** //
+// IMPORT FONT
+// ********************************** //
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+
+
+// ********************************** //
+// STYLES
+// ********************************** //
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: #3498db;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+}
+.me {
+    .name {
+        font-size: 10vw;
+        line-height: 11vw;
+        text-transform: uppercase;
+        text-shadow: 3px 3px #2980b9;
+        letter-spacing: 1vw;
+    }
+    .social {
+        display: flex;
+        justify-content: space-between;
+        float: right;
+        width: 10vw;
+        margin-right: 1vw;
+
+        a {
+            transition: transform .2s ease;
+
+            &:hover {
+                transform: translateY(-10%);
+                transition: transform .3s ease;
+            }
+        }
+        .github {
+            @include inline-svg($github-shadow);
+            width: 2vw;
+            height: 2vw;
+
+            &:after {
+                @include inline-svg($github);
+                content: "";
+                display: block;
+                margin-top: -2px;
+                margin-left: -2px;
+                width: 2vw;
+                height: 2vw;
+            }
+        }
+        .twitter {
+            @include inline-svg($twitter-shadow);
+            width: 2vw;
+            height: 2vw;
+
+            &:after {
+                @include inline-svg($twitter);
+                content: "";
+                display: block;
+                margin-top: -2px;
+                margin-left: -2px;
+                width: 2vw;
+                height: 2vw;
+            }
+        }
+        .linkedin {
+            @include inline-svg($linkedin-shadow);
+            width: 2vw;
+            height: 2vw;
+
+            &:after {
+                @include inline-svg($linkedin);
+                content: "";
+                display: block;
+                margin-top: -2px;
+                margin-left: -2px;
+                width: 2vw;
+                height: 2vw;
+            }
+        }
+    }
+}
