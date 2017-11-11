@@ -133,10 +133,11 @@ gulp.task('watch', function(done){
     gulp.watch(src+'/pug/**/*.svg').on('change', gulp.parallel('img'));
     done();
 });
+gulp.task('watch', gulp.series('browser-sync', 'watch'));
 
 
 
 // ********************************** //
 // DEFAULT TASKS
 // ********************************** //
-gulp.task('default', gulp.series('img', gulp.parallel('scss', 'js'), 'pug', 'browser-sync', 'watch'));
+gulp.task('default', gulp.series('img', gulp.parallel('scss', 'js'), 'pug'));
