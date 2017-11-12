@@ -59,7 +59,7 @@ body {
         font-size: 10vw;
         line-height: 11vw;
         text-transform: uppercase;
-        text-shadow: 3px 3px #2980b9;
+        text-shadow: 0.3vw 0.2vw #2980b9;
         letter-spacing: 1vw;
         cursor: default;
 
@@ -71,8 +71,12 @@ body {
         display: flex;
         justify-content: space-between;
         float: right;
-        width: 10vw;
+        width: 15vw;
         margin-right: 1vw;
+
+        @media screen and (min-width: 415px) {
+            width: 10vw;
+        }
 
         a {
             transition: transform .2s ease;
@@ -84,47 +88,83 @@ body {
         }
         .github {
             @include inline-svg($github-shadow);
-            width: 2vw;
-            height: 2vw;
+            width: 4vw;
+            height: 4vw;
+
+            @media screen and (min-width: 415px) {
+                width: 2vw;
+                height: 2vw;
+            }
 
             &:after {
                 @include inline-svg($github);
                 content: "";
                 display: block;
-                margin-top: -2px;
-                margin-left: -2px;
-                width: 2vw;
-                height: 2vw;
+                width: 4vw;
+                height: 4vw;
+                margin-top: -0.15vw;
+                margin-left: -0.15vw;
+
+                @media screen and (min-width: 415px) {
+                    width: 2vw;
+                    height: 2vw;
+                    margin-top: -0.15vw;
+                    margin-left: -0.15vw;
+                }
             }
         }
         .twitter {
             @include inline-svg($twitter-shadow);
-            width: 2vw;
-            height: 2vw;
+            width: 4vw;
+            height: 4vw;
+
+            @media screen and (min-width: 415px) {
+                width: 2vw;
+                height: 2vw;
+            }
 
             &:after {
                 @include inline-svg($twitter);
                 content: "";
                 display: block;
-                margin-top: -2px;
-                margin-left: -2px;
-                width: 2vw;
-                height: 2vw;
+                width: 4vw;
+                height: 4vw;
+                margin-top: -0.15vw;
+                margin-left: -0.15vw;
+
+                @media screen and (min-width: 415px) {
+                    width: 2vw;
+                    height: 2vw;
+                    margin-top: -0.15vw;
+                    margin-left: -0.15vw;
+                }
             }
         }
         .linkedin {
             @include inline-svg($linkedin-shadow);
-            width: 2vw;
-            height: 2vw;
+            width: 4vw;
+            height: 4vw;
+
+            @media screen and (min-width: 415px) {
+                width: 2vw;
+                height: 2vw;
+            }
 
             &:after {
                 @include inline-svg($linkedin);
                 content: "";
                 display: block;
-                margin-top: -2px;
-                margin-left: -2px;
-                width: 2vw;
-                height: 2vw;
+                width: 4vw;
+                height: 4vw;
+                margin-top: -0.15vw;
+                margin-left: -0.15vw;
+
+                @media screen and (min-width: 415px) {
+                    width: 2vw;
+                    height: 2vw;
+                    margin-top: -0.15vw;
+                    margin-left: -0.15vw;
+                }
             }
         }
     }
@@ -145,7 +185,6 @@ body {
     transform: translateX(-50%) translateY(-50%);
     animation-name: dropEffect;
     animation-duration: 2s;
-    animation-iteration-count: infinite;
 }
 @keyframes dropEffect {
     0% {
